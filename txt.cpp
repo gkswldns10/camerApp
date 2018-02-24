@@ -15,7 +15,7 @@ void txt::make_txt() //, std::vector<Point2f>& landmark)
   outputFile.open(filename1 + ".txt");
 
   std::vector<dlib::rectangle> dets = detector(imgDlib);
-  DLOG("Number of faces detected: %lu \n", dets.size());
+  //DLOG("Number of faces detected: %lu \n", dets.size());
 
   full_object_detection shape = sp(imgDlib, dets[0]);
 
@@ -25,11 +25,13 @@ void txt::make_txt() //, std::vector<Point2f>& landmark)
     outputFile << x << " " << y << endl;
     //landmark.push_back(Point2f(x,y));
   }
-  outputFile.close(filename + ".txt");
+  outputFile.close();
 }
 
 int main(){
-  txt txt1 = txt("ted_cruz.jpg");
-  txt1.make_txt()
+  txt txt1 = txt("1.jpg");
+  txt txt2 = txt("2.jpg");
+  txt1.make_txt();
+  txt2.make_txt();
   return 0;
 }
