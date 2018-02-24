@@ -1,8 +1,12 @@
 #include <opencv2/opencv.hpp>
+#include <opencv2/photo.hpp>
+#include <opencv2/highgui/highgui.hpp>
 #include <dlib/image_processing/frontal_face_detector.h>
 #include <dlib/image_processing/render_face_detections.h>
 #include <dlib/image_processing/shape_predictor.h>
 #include <dlib/image_processing.h>
+#include <dlib/image_processing.h>
+
 #include <dlib/gui_widgets.h>
 #include <dlib/image_io.h>
 #include <dlib/image_loader/jpeg_loader.h>
@@ -205,6 +209,11 @@ int main( int argc, char** argv)
 	std::vector<Point2f> points1, points2;
 	points1 = detect_landmard(filename1);
 	points2 = detect_landmard(filename2);
+
+ for (int i = points1.begin(); points1.end(); i++){
+	 cout << points1[x].x() << "," << points1[x].y() << endl;
+ }
+
   int flg = 0;
 	cout << flg++ << endl;
 /*
