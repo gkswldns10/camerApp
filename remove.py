@@ -6,13 +6,17 @@ import cv2
 import matplotlib.pyplot as plt
 
 # pre-trained face detector & classifier in opencv
+<<<<<<< HEAD
 cv_path = "/usr/local/lib/python3.6/site-packages/cv2/data"
+=======
+cv_path = "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages"
+>>>>>>> f12539c2d471c0712a2041197ceaec1e0d5396a3
 class_path = cv_path + "/haarcascade_frontalface_default.xml" # Classifier path
 
 class Classifier():
 	def __init__(self):
 		# Obtain haarcascade_frontalface_default classifier in my computer
-		self.face_cascade = cv2.CascadeClassifier(class_path)
+		self.face_cascade = cv2.CascadeClassifier(class_path) # trained neural network
 
 	# Return grayscale of image (reduce to 1 channel)
 	def GrayScale(self,img):
@@ -37,8 +41,8 @@ class Classifier():
 	def CropAll(self,img):
 		faces = self.DetectFaces(img)
 		gray_scale = self.GrayScale(img)
-		for (x,y,w,h) in faces:
-			cv2.rectangle(img, (x,y), (x+w,y+h), (255,0,0),2)
+		for (x,y,w,h) in faces: # possible error 
+			cv2.rectangle(img, (x,y), (x+w,y+h), (255,0,0),2) # index 
 			roi_gray = gray_scale[y:y+h, x:x+w]
 			roi_color = img[y:y+h, x:x+w]
 		return roi_color,(np.arange(y,y+h), np.arange(x,x+w))
