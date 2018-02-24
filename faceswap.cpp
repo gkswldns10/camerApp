@@ -130,7 +130,6 @@ int main( int argc, char** argv)
 	points2 = readPoints(filename2 + ".txt");
     
 
-
     //convert Mat to float data type
     img1.convertTo(img1, CV_32F);
     img1Warped.convertTo(img1Warped, CV_32F);
