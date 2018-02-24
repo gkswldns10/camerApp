@@ -25,6 +25,11 @@ void txt::make_txt() //, std::vector<Point2f>& landmark)
     outputFile << x << " " << y << endl;
     //landmark.push_back(Point2f(x,y));
   }
-  
   outputFile.close(filename + ".txt");
+}
+
+int main(){
+  txt txt1 = txt("ted_cruz.jpg");
+  txt1.make_txt()
+  return 0;
 }

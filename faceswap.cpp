@@ -1,8 +1,8 @@
-#include <opencv2/opencv.hpp>
+#include "opencv2/opencv.hpp"
 #include <iostream>
 #include <fstream>
 #include <string> 
-#include "txt.h"
+//#include "txt.h"
 
 using namespace cv;
 using namespace std;
@@ -111,19 +111,19 @@ void warpTriangle(Mat &img1, Mat &img2, vector<Point2f> &t1, vector<Point2f> &t2
 int main( int argc, char** argv)
 {	
 	//Read input images
-    string filename1 = argv[1];
-    string filename2 = argv[2];
+    string filename1 = "ted_cruz.jpg";
+    string filename2 = "hillary_clinton.jpg";
     
     Mat img1 = imread(filename1);
     Mat img2 = imread(filename2);
     Mat img1Warped = img2.clone();
-	
+	/*
 	txt txt_1 = txt(filename1);
 	txt txt_2 = txt(filename2);
 
 	txt_1.make_txt();
 	txt_2.make_txt();
-
+    */
     //Read points
 	vector<Point2f> points1, points2;
 	points1 = readPoints(filename1 + ".txt");
