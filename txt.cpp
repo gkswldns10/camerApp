@@ -12,7 +12,7 @@ void txt::make_txt() //, std::vector<Point2f>& landmark)
   dlib::load_image(imgDlib, filename);
 //  dlib::pyramid_up(img);
   ofstream outputFile;
-  outputFile.open(filename1 + ".txt");
+  outputFile.open(filename + ".txt");
 
   std::vector<dlib::rectangle> dets = detector(imgDlib);
   //DLOG("Number of faces detected: %lu \n", dets.size());
