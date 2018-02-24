@@ -49,7 +49,7 @@ import numpy as np
 
 import sys
 
-PREDICTOR_PATH = "/mnt/c/Users/tjxor/Desktop/hack/shape_predictor_68_face_landmarks.dat"
+PREDICTOR_PATH = "/Users/Kevin/Desktop/HackIllinois/camerApp/shape_predictor_68_face_landmarks.dat"
 SCALE_FACTOR = 1 
 FEATHER_AMOUNT = 11
 
@@ -201,7 +201,7 @@ def correct_colours(im1, im2, landmarks1):
 
 im1, landmarks1 = read_im_and_landmarks(sys.argv[1])
 im2, landmarks2 = read_im_and_landmarks(sys.argv[2])
-
+----------------------------------------------------------------
 M = transformation_from_points(landmarks1[ALIGN_POINTS],
                                landmarks2[ALIGN_POINTS])
 

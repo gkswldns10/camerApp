@@ -6,7 +6,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 # pre-trained face detector & classifier in opencv
-cv_path = "/usr/local/lib/python3.5/dist-packages/cv2/data"
+cv_path = "/usr/local/lib/python3.6/site-packages/cv2/data"
 class_path = cv_path + "/haarcascade_frontalface_default.xml" # Classifier path
 
 class Classifier():
@@ -18,7 +18,7 @@ class Classifier():
 	def GrayScale(self,img):
 		gray_scale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 		return gray_scale
-
+		#why? 
 	# Assume there is a face in the picture
 	def DetectFaces(self,img):
 		gray_scale = self.GrayScale(img)
@@ -46,7 +46,6 @@ class Classifier():
 # Read a file in cv2 format (uint8)
 def CVRead(file):
 	return cv2.imread(file)
-
 
 # plt.figure()
 # edges = DetectEdges(img)
