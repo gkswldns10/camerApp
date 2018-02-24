@@ -111,8 +111,8 @@ void warpTriangle(Mat &img1, Mat &img2, vector<Point2f> &t1, vector<Point2f> &t2
 int main( int argc, char** argv)
 {	
 	//Read input images
-    string filename1 = "ted_cruz.jpg";
-    string filename2 = "hillary_clinton.jpg";
+    string filename1 = "1.jpg";
+    string filename2 = "2.jpg";
     
     Mat img1 = imread(filename1);
     Mat img2 = imread(filename2);
